@@ -1,0 +1,27 @@
+#Better Data Plan?
+def cost_of_flexible_for_1_plan(amount_of_data):
+    cost_of_plan_1 = int(10 * amount_of_data  + 20)
+    return (cost_of_plan_1)
+print(cost_of_flexible_for_1_plan(50))
+def cost_of_flexible_for_2_plan(amount_of_data):
+  cost_of_plan_2 = int(70)
+  return cost_of_plan_2
+print(cost_of_flexible_for_2_plan(50))
+def plot_data():
+  import matplotlib.pyplot as plt
+  import random
+  z=0
+  input_values = []
+  output_values_plan_1 = []
+  output_values_plan_2 = []
+  for z in range(20):
+    x=(random.randint(0,10))
+    input_values.append(x)
+    output_values_plan_1.append(cost_of_flexible_for_1_plan(x))
+    output_values_plan_2.append(cost_of_flexible_for_2_plan(x))
+    z = z+1
+  plt.plot([input_values],[output_values_plan_1],'rx')
+  plt.plot([input_values],[output_values_plan_2],'bx')
+  plt.axis([0, 10, 0, 100])
+  
+plot_data()
